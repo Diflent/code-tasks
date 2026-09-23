@@ -2,6 +2,7 @@ import unittest
 
 from main import gcd_recursive
 from main import lcm
+from main import find_gcd_slow
 
 
 class TestGCD(unittest.TestCase):
@@ -23,5 +24,18 @@ class TestGCD(unittest.TestCase):
         self.assertEqual(lcm(-48, 18), 144)
         self.assertEqual(lcm(0, 0), 0)
 
+    def test_gcd_slow(self):
+        self.assertEqual(find_gcd_slow(48, 18), 6)
+        self.assertEqual(find_gcd_slow(18, 48), 6)
+        self.assertEqual(find_gcd_slow(0, 5), 5)
+        self.assertEqual(find_gcd_slow(5, 0), 5)
+        self.assertEqual(find_gcd_slow(-48, 18), 6)
+        self.assertEqual(find_gcd_slow(48, -18), 6)
+        self.assertEqual(find_gcd_slow(-48, -18), 6)
+        self.assertEqual(find_gcd_slow(1, 1), 1)
+        self.assertEqual(find_gcd_slow(0, 0), 0)
+
+
 if __name__ == "__main__":
     unittest.main()
+    
