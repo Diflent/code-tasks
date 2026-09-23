@@ -1,4 +1,4 @@
-"""gcd_recursive — рекурсивное вычисление НОД"""
+"""рекурсивное вычисление НОД"""
 def gcd_recursive(a: int, b: int) -> int:
     a, b = abs(a), abs(b)
     if b == 0:
