@@ -39,3 +39,8 @@ def find_gcd_slow(a: int, b: int) -> int:
             a -= b
 
     return a
+
+def gcd_iterative_fast(a: int, b: int) -> int:
+    while b != 0:
+        a, b = b, a % b
+    return a
